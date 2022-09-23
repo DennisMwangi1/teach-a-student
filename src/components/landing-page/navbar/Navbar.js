@@ -1,11 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div>
+    <div className='navbar'>
           <h2>Teach a student</h2> 
-          {/* <NavLink path='/' element={<h1>Home</h1>}>Home</NavLink> */}
+          <a href='/'>Home</a>
+          <a href='/dashboard'>Parent/Student Dashboard</a>
+          <a href='/'>Teacher dashboard</a>
+      <button>Log in</button>
+      <button>Sign up</button>
           
     </div>
   )
