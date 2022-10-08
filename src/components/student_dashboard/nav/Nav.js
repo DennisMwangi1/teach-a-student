@@ -1,6 +1,6 @@
 import React from 'react'
 
-function aside() {
+function Nav() {
   return (
     <div className='bg-zinc-900 text-white  rounded-tr-3xl rounded-tl-3xl h-[20vh]'>
       <h1 className='pt-2 pl-4 italic'>Teach-A-Student</h1>
@@ -15,4 +15,4 @@ function aside() {
   )
 }
 
-export default aside
+export default Nav

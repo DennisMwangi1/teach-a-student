@@ -2,7 +2,7 @@ import '../App.css';
 // import Body from './landing-page/Body';
 // import Footer from './landing-page/Footer';
 // import Navbar from './landing-page/navbar/Navbar';
-import Student from './student_dashboard/student';
+import Student from './student_dashboard/Student';
 
 function App() {
   return (

@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import icon from '../images/icon.png'
 import teacher from '../images/face.jpg'
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 
-function body() {
+function Body() {
+    const [birds,setBirds] = useState([])
+    useEffect(() => {
+        fetch('https://cryptic-spire-94355.herokuapp.com/birds')
+            .then(res => res.json())
+            .then(data => setBirds(data))
+    }, [])
 
     const percentage = 66
     return (
@@ -41,10 +47,12 @@ function body() {
 
                 {/* render a component that will consist of the students upcoming sessions */}
                 <div className=' overflow-hidden hover:overflow-y-scroll h-[40vh] bg-slate-300 rounded-2xl pb-10 drop-shadow-md'>
-                    <div className='bg-slate-100 w-10/12 m-auto mt-10  rounded-2xl  flex justify-around'>
+                    {birds.map((bird) => {
+                        return (
+                                 <div className='bg-slate-100 w-10/12 m-auto mt-10  rounded-2xl  flex justify-around'>
                         <img className='rounded-full h-14 mt-2' src={teacher} alt='' />
                         <div>
-                            <h1 className='font-black pt-4'>Current class</h1>
+                                    <h1 className='font-black pt-4'>{bird.name }</h1>
                             <p className='italic font-light'>By alexander Costa </p>
                         </div>
                         <div className='w-2/12'>
@@ -53,8 +61,11 @@ function body() {
                         <div>
                             <button className='bg-sky-400 mt-4 rounded-md p-2' >Continue</button>
                         </div>
-                    </div>
+                    </div> 
+                        )
                     
+                    })}
+
                 </div>
 
 
@@ -82,4 +93,4 @@ function body() {
     )
 }
 
-export default body
+export default Body
