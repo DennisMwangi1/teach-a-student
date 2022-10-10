@@ -6,12 +6,12 @@ import 'react-circular-progressbar/dist/styles.css';
 
 
 function Body() {
-    const [birds,setBirds] = useState([])
-    useEffect(() => {
-        fetch('https://cryptic-spire-94355.herokuapp.com/birds')
-            .then(res => res.json())
-            .then(data => setBirds(data))
-    }, [])
+    // const [birds,setBirds] = useState([])
+    // useEffect(() => {
+    //     fetch('https://cryptic-spire-94355.herokuapp.com/birds')
+    //         .then(res => res.json())
+    //         .then(data => setBirds(data))
+    // }, [])
 
     const percentage = 66
     return (
@@ -47,7 +47,7 @@ function Body() {
 
                 {/* render a component that will consist of the students upcoming sessions */}
                 <div className=' overflow-hidden hover:overflow-y-scroll h-[40vh] bg-slate-300 rounded-2xl pb-10 drop-shadow-md'>
-                    {birds.map((bird) => {
+                    {/* {birds.map((bird) => {
                         return (
                                  <div className='bg-slate-100 w-10/12 m-auto mt-10  rounded-2xl  flex justify-around'>
                         <img className='rounded-full h-14 mt-2' src={teacher} alt='' />
@@ -64,7 +64,7 @@ function Body() {
                     </div> 
                         )
                     
-                    })}
+                    })} */}
 
                 </div>
 
