@@ -1,5 +1,4 @@
 import React from 'react'
-import logo2 from '../images/logo2.png'
 // import { NavLink } from 'react-router-dom'
 
 function Navbar() {
