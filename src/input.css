@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  background-color: rgba(231, 238, 245, 0.492);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,7 +25,7 @@ code {
 } */
 .navbar{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .navbar>a{
   padding-top: 50px;
@@ -35,4 +36,22 @@ code {
 .img{
   height: 300px;
 }
+label{
+  font-size: 19px;
+  font-weight: bold;
+  font-family: serif;
+  font-style: italic;
+}
+input{
+  margin: 20px;
+  margin-top: 4px;
+  margin-bottom: 40px;
+  font-size: 17px;
+  text-align: center;
+  border-radius: 7px;
+  font-family: serif;
+}
 
+.bodydiv{
+  display: none;
+}
