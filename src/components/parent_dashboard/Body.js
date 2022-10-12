@@ -9,7 +9,7 @@ function Body() {
     // console.log(parent)
     useEffect(() => {
         const loadParent = async () => {
-            await axios.get("http://127.0.0.1:3000/parents/3")
+            await axios.get("http://127.0.0.1:3000/parents/5")
                 .then((res) => {
                     setParent(res.data);
                 })
