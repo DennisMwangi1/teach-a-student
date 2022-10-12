@@ -2,7 +2,6 @@ import React from 'react'
 import student1 from './images/student1.png'
 import books from './images/books.png'
 import book from './images/book.jpg'
-import DonutChart from 'react-donut-chart';
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import AnimatedText from 'react-animated-text-content';
@@ -35,11 +34,11 @@ function Body() {
                     </AnimatedText>
                     <p className='mt-6 ml-6 text-lg text-center tracking-wide '>Enter your E-mail below to get started<br></br>and receive a brochure of our services.</p>
                     <form>
-                        <input className=' text-base p-[12px] ml-40 mt-6 rounded-full rounded-r-none  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                        <input className=' text-base p-[12px] mr-0 ml-40 mt-6 rounded-full rounded-r-none  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                     disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                     invalid:border-yellow-500 invalid:text-slate-600
                     focus:invalid:border-yellow-500 focus:invalid:ring-yellow-500 ' type='email' placeholder='Enter your email...' />
-                        <input className='text-base p-[12px]  mt-6 rounded-full rounded-l-none bg-yellow-300 font-light hover:bg-yellow-400 ' type='submit' value='Get Started' />
+                        <input className='text-base p-[12px]  mt-6 ml-0 rounded-full rounded-l-none bg-yellow-300 font-light hover:bg-yellow-400 ' type='submit' value='Get Started' />
                     </form>
                 </div>
                 <div className='relative  p-60 '>
@@ -115,34 +114,7 @@ function Body() {
                     </AnimationOnScroll>
                 </div>
             </section>
-            <section className='mt-20'>
-                <div>
-                    <h2>Analytics your daily,weekly and monthly activity</h2>
-                    <p>We help track your progress as you have sessions with our student teachers</p>
-                    {/* icon here (ticked box) */}
-                    <p>Get updates</p>
-                    {/* icon here (ticked box) */}
-                    <p>Track activity</p>
-                </div>
-            </section>
-            <DonutChart
-                data={[
-                    {
-                        label: 'Give you up',
-                        value: 25,
-                    },
-                    {
-                        label: 'jut',
-                        value: 25,
-                        //   isEmpty: true,
-                    },
-                    {
-                        label: 'mark',
-                        value: 50,
-                        //   isEmpty: true,
-                    },
-                ]}
-            />;
+           
         </main>
     )
 }
