@@ -38,7 +38,7 @@ function Body() {
                     disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                     invalid:border-yellow-500 invalid:text-slate-600
                     focus:invalid:border-yellow-500 focus:invalid:ring-yellow-500 ' type='email' placeholder='Enter your email...' />
-                        <input className='text-base p-[12px]  mt-6 ml-0 rounded-full rounded-l-none bg-yellow-300 font-light hover:bg-yellow-400 ' type='submit' value='Get Started' />
+                        <button className='text-base p-[11px] pb-[13px] mt-6 ml-0 rounded-full rounded-l-none bg-yellow-300 font-light hover:bg-yellow-400 ' value='Get Started'>Get Started</button>
                     </form>
                 </div>
                 <div className='relative  p-60 '>
