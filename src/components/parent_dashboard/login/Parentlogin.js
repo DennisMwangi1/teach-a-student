@@ -1,41 +1,38 @@
 import React, { useState } from 'react'
 import books from '../images/books.png'
 
-function Parentlogin({regLog,setRegLog}) {
+function Parentlogin({regLog,setRegLog,setParent,setStudentDashboard, studentDashboard }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error,setError]= useState([])
   function handleSubmit(e) {
-    // e.preventDefault()
-    // fetch('http://127.0.0.1:3000/login', {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type":"application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     user_name: username,
-    //     password
-    //   })
-    // }).then((res) => {
-    //   if (res.ok) {
-    //     res.json().then((student)=>setStudent(student))
-    //   } else {
-    //     res.json().then((errorData)=>setError(errorData.error))
-    //   }
-    // })
+    e.preventDefault()
+    fetch('http://127.0.0.1:3000/parentlogin', {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({
+        user_name: username,
+        password
+      })
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((parent)=>setParent(parent))
+      } else {
+        res.json().then((errorData)=>setError(errorData.error))
+      }
+    })
 
-    // setUsername('')
-    // setPassword('')
-    // e.target.reset()
+    setUsername('')
+    setPassword('')
+    e.target.reset()
     
   }
 
-  function landing() {
-    localStorage.removeItem('TEACH-A-STUDENT');
-    window.location.reload()
-  }
+  
   return (
-    <div className='h-[75vh]   m-auto grid grid-cols-2 rounded-md'>
+    <div className='h-[75vh]  w-8/12 m-auto grid grid-cols-2 rounded-md'>
       <div className=' pt-20 pl-20 rounded-tl-3xl rounded-bl-3xl bg-black'>
         <h1 className=''>Parent Login</h1>
         <img src={books} alt="" className='h-40 m-auto pr-20' />
@@ -60,7 +57,7 @@ function Parentlogin({regLog,setRegLog}) {
         <button className=' text-blue-500 font-semibold text-lg hover:text-purple-500' onClick={() => setRegLog(!regLog)}>Register</button>
         </div>
         <div className='pt-4'>
-          <p className='font-light'>Back to <span className='font-semibold text-white hover:text-black hover:cursor-pointer' onClick={()=>landing()}>Landing Page</span>...</p>
+          <p className='font-light'>Back to <span className='font-semibold text-white hover:text-black hover:cursor-pointer' onClick={()=>setStudentDashboard(!studentDashboard)}>StudentDashboard</span>...</p>
         </div>
       </div>
     </div>
