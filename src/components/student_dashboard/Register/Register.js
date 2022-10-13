@@ -34,7 +34,11 @@ function Register({ regLog, setRegLog, setStudent }) {
       }),
     }).then((res) => {
       if (res.ok) {
-        res.json().then((student) => setStudent(student))
+        res.json().then((student) => {
+          setStudent(student)
+          localStorage.setItem('STUDENT', JSON.stringify(student.id))
+        })
+        
         
       } else {
         res.json().then((errorData) => setErrors(errorData.error))

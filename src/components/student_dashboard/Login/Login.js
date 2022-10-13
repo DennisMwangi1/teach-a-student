@@ -18,7 +18,11 @@ function Login({ regLog, setRegLog, setStudent }) {
       })
     }).then((res) => {
       if (res.ok) {
-        res.json().then((student)=>setStudent(student))
+        res.json().then((student) => {
+          setStudent(student)
+          localStorage.setItem('STUDENT', JSON.stringify(student.id))
+        })
+        
       } else {
         res.json().then((errorData)=>setError(errorData.error))
       }
@@ -30,10 +34,7 @@ function Login({ regLog, setRegLog, setStudent }) {
     
   }
 
-  function landing() {
-    localStorage.removeItem('TEACH-A-STUDENT');
-    window.location.reload()
-  }
+
 
   return (
     <div className='h-[75vh]  w-7/12 m-auto grid grid-cols-2 rounded-md'>
@@ -58,9 +59,6 @@ function Login({ regLog, setRegLog, setStudent }) {
         <div>
         <p className='pt-4 font-light  tracking-wide italic'>Don't have an account?</p>
         <button className=' text-blue-500 font-semibold text-lg hover:text-purple-500' onClick={()=>setRegLog(!regLog)}>Register</button>
-        </div>
-        <div className='pt-4'>
-          <p className='font-light'>Back to <span className='font-semibold text-white hover:text-black hover:cursor-pointer' onClick={()=>landing()}>Landing Page</span>...</p>
         </div>
       </div>
     </div>

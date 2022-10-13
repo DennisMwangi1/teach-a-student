@@ -23,14 +23,14 @@ function Student({ studentDashboard, setStudentDashboard }) {
   }, [student])
 
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:3000/me")
-      .then((res) => {
-        if (res.ok) {
-        res.json().then((student)=>setStudent(student))
-      }
-    })
-  },[])
+  // useEffect(() => {
+  //   fetch("http://127.0.0.1:3000/me")
+  //     .then((res) => {
+  //       if (res.ok) {
+  //         res.json().then((student) => setStudent(student))
+  //     }
+  //   })
+  // },[])
 
  
   return (
