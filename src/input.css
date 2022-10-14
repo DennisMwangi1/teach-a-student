@@ -55,3 +55,10 @@ input{
 .bodydiv{
   display: none;
 }
+
+.disabled{
+  background-color: rgb(238, 115, 0) ;
+  pointer-events: none;
+  padding: 3px;
+  border-radius: 10px;
+}
