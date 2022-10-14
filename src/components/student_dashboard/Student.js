@@ -8,7 +8,7 @@ import Login from './Login/Login'
 function Student({ studentDashboard, setStudentDashboard }) {
   const [regLog, setRegLog] = useState(true)
   const [student, setStudent] = useState(null)
-  console.log(student)
+  // console.log(student)
 
   useEffect(() => {
       const data = localStorage.getItem('TEACH-A-STUDENT-STUDENT')

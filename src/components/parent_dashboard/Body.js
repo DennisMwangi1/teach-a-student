@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-import { CircularProgressbar } from 'react-circular-progressbar';
+
 import 'react-circular-progressbar/dist/styles.css';
+import family from './images/family1.png'
+import Teacher from './Teacher';
 
 function Body({parent}) {
     const [teachers, setTeachers] = useState([])
     console.log(parent)
+    
+    
+
     useEffect(() => {
        
         const loadTeachers = async () => {
@@ -20,6 +25,7 @@ function Body({parent}) {
 
     }, [])
 
+   
     return (
         <main className='grid grid-cols-3 '>
 
@@ -28,7 +34,7 @@ function Body({parent}) {
                     <h1 className='pt-8 pl-4 font-bold text-3xl tracking-wide font-serif'>Hello  {parent.first_name}!</h1>
 
                     <p className=' pl-12 font-bold text-lg tracking-wide italic font-serif'>It's good to see you.</p>
-                    {/* <img className='absolute -bottom-2 left-[18em] h-[200px] w-[200px]' src={icon} alt='' /> */}
+                    <img className='absolute -top-[2.9em] left-[18em] h-40 ' src={family} alt='' />
                 </div>
 
 
@@ -42,20 +48,7 @@ function Body({parent}) {
                 {/* render a component that will consist of teachers */}
                 <div className=' overflow-hidden hover:overflow-y-scroll h-[40vh] bg-slate-50 rounded-2xl pb-10 drop-shadow-md'>
                     {teachers.map((teacher) => {
-                        return (
-                            <div className='bg-slate-100 w-10/12 m-auto mt-10  rounded-2xl  flex justify-around' key={teacher.id}>
-                                <div>
-                                    <h1 className='font-black pt-4'>Name: {teacher.first_name} {teacher.last_name}</h1>
-                                    <p className='italic font-light'>Location: {teacher.location} </p>
-                                </div>
-                                <div className='w-2/12'>
-                                    <CircularProgressbar className='h-[50px]  mt-2 mb-2 rounded-full  ' value={teacher.age} text={`Age: ${teacher.age}`} />
-                                </div>
-                                <div>
-                                    <button className='bg-sky-400 mt-4 rounded-md p-[2px] text-sm' >Request session</button>
-                                </div>
-                            </div>
-                        )
+                        return <Teacher teacher={teacher} parent={parent} key={teacher.id } />
                     })}
 
                 </div>
@@ -65,7 +58,7 @@ function Body({parent}) {
 
             <section className='  rounded-br-3xl  '>
 
-                <h1 className='text-center pt-2 font-bold mt-8 font-serif tracking-wide text-lg '>Requested sessions</h1>
+                <h1 className='text-center pt-2 font-bold mt-8 font-serif tracking-wide text-lg  '>Requested sessions</h1>
                 <div className='bg-slate-50 w-10/12 m-auto mt-2 mb-2 h-[25vh] drop-shadow-md rounded-2xl overflow-hidden hover:overflow-y-scroll'>
                     {parent && parent.teachers.map((teacher) => (
                         <div className='bg-slate-300 m-2 mb-2 m-auto  rounded-2xl' key={teacher.id}>

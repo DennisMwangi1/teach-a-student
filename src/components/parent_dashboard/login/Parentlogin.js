@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import books from '../images/books.png'
+// import books from '../images/books.png'
+import parent from '../images/parent.png'
 
 function Parentlogin({regLog,setRegLog,setParent,setStudentDashboard, studentDashboard }) {
   const [username, setUsername] = useState('')
@@ -35,7 +36,7 @@ function Parentlogin({regLog,setRegLog,setParent,setStudentDashboard, studentDas
     <div className='h-[75vh]  w-8/12 m-auto grid grid-cols-2 rounded-md'>
       <div className=' pt-20 pl-20 rounded-tl-3xl rounded-bl-3xl bg-black'>
         <h1 className=''>Parent Login</h1>
-        <img src={books} alt="" className='h-40 m-auto pr-20' />
+        <img src={parent} alt="" className='h-[7em] m-auto pr-20' />
         <h1 className='text-white italic pl-2 pt-8 text-3xl font-black font-mono'>Teach-A-Student Parent</h1>
         <p className='text-white text-center  w-3/4 pt-2 italic font-light'>Student learning by students for students</p>
       </div>

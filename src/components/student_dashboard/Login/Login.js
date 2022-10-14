@@ -1,4 +1,5 @@
 import React, {  useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import books from '../images/books.png'
 
 function Login({ regLog, setRegLog, setStudent }) {
@@ -60,6 +61,7 @@ function Login({ regLog, setRegLog, setStudent }) {
         <p className='pt-4 font-light  tracking-wide italic'>Don't have an account?</p>
         <button className=' text-blue-500 font-semibold text-lg hover:text-purple-500' onClick={()=>setRegLog(!regLog)}>Register</button>
         </div>
+        <NavLink to='/'className='font-black text-white float-right pr-4 hover:text-pink-300'>Back to HomePage</NavLink>
       </div>
     </div>
   )

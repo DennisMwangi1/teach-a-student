@@ -92,13 +92,13 @@ function Body({student}) {
 
                 <div className='bg-slate-300 w-10/12 m-auto mt-10 h-[50vh] drop-shadow-md rounded-2xl'>
                     <h1 className='text-center tracking-wide text-lg font-black pt-2'>Profile Section</h1>
-                    <p className='p-[7px] font-semibold font-serif '>Firts Name:<span className='italic font-light pl-2'>{student.first_name }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>Last Name:<span className='italic font-light pl-2'>{student.last_name }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>User Name:<span className='italic font-light pl-2'>{student.user_name }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>School:<span className='italic font-light pl-2'>{student.school }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>Form:<span className='italic font-light pl-2'>{student.form }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>Average Grade:<span className='italic font-light pl-2'>{student.avg_grade }</span></p>
-                    <p className='p-[7px] font-semibold font-serif '>Target Grade:<span className='italic font-light pl-2'>{student.trgt_grade }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>Firts Name:<span className='italic font-light pl-2'>{student.first_name }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>Last Name:<span className='italic font-light pl-2'>{student.last_name }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>User Name:<span className='italic font-light pl-2'>{student.user_name }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>School:<span className='italic font-light pl-2'>{student.school }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>Form:<span className='italic font-light pl-2'>{student.form }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>Average Grade:<span className='italic font-light pl-2'>{student.avg_grade }</span></p>
+                    <p className='p-[5px] font-semibold font-serif '>Target Grade:<span className='italic font-light pl-2'>{student.trgt_grade }</span></p>
                 </div>
 
                 <div className='bg-slate-300 w-10/12 m-auto mt-10 h-[20vh] drop-shadow-md rounded-2xl'>
