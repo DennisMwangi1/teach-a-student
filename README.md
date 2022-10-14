@@ -31,13 +31,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/DennisMwangi1/Antique_client/blob/main/src/images/logo.png?raw=true" alt="Logo" width="300" height="250">
+    <img src="https://github.com/DennisMwangi1/teach-a-student/blob/main/src/components/landing-page/images/books.png" alt="Logo" width="300" height="350">
   </a>
 
-  <h3 align="center">ANTIQUE</h3>
+  <h3 align="center">Teach-A-Student</h3>
 
   <p align="center">
-    Healthy body healthy Mind
+    A student platform to tutor students using students
     <br />
     <br />
     <a href="https://antique-fitness.netlify.app/"><strong>View Application</strong></a>
