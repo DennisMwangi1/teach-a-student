@@ -40,9 +40,11 @@
     A student platform to tutor students using students
     <br />
     <br />
-    <a href="https://antique-fitness.netlify.app/"><strong>View Application</strong></a>
+<!--     <a href="https://antique-fitness.netlify.app/"><strong>View Application</strong></a> -->
+    <a href="https://github.com/DennisMwangi1/teach-a-student-server"><strong>View the backend</strong></a>
    
   </p>
+  
 </div>
 
 
@@ -78,9 +80,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/DennisMwangi1/Antique_client/blob/main/src/images/antique3.png?raw=true" width="600" height="300">
-<img src="https://github.com/DennisMwangi1/Antique_client/blob/main/src/images/antique1.png?raw=true" width="600" height="300">
-<img src="https://github.com/DennisMwangi1/Antique_client/blob/main/src/images/antique2.png?raw=true" width="600" height="300">
+<img src="https://github.com/DennisMwangi1/teach-a-student/blob/main/teach-a-student1.png" width="600" height="300">
+<img src="https://github.com/DennisMwangi1/teach-a-student/blob/main/teach-a-student2.png" width="600" height="300">
+<img src="https://github.com/DennisMwangi1/teach-a-student/blob/main/teach-a-student3.png" width="600" height="300">
+<img src="https://github.com/DennisMwangi1/teach-a-student/blob/main/teach-a-student4.png" width="600" height="300">
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,9 +97,9 @@
 
 * <strong>RUBY</strong>
 * <strong>REACT</strong>
-* <strong>SINATRA</strong>
+* <strong>RAILS</strong>
 * <strong>HTML5</strong>
-* <strong>CSS3</strong>
+* <strong>Tailwind CSS</strong>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -159,7 +163,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Dennis Mwangi @denniskamau1803@gmail.com
+Dennis Mwangi @denniskamau1803@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
